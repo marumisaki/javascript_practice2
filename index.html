@@ -4,6 +4,7 @@
 <head>
 	<meta charset="utf-8">
 	<title>ToDoリスト</title>
+	<script type="text/javascript" src="index.js"></script>
 </head>
 
 <body>
@@ -29,49 +30,9 @@
 	</div>
 	<form name="new_task">
 		<h2>新規タスクの追加</h2>
-		<input type="text" name="addtask" class="addtask">
-		<input type="button" value="追加" onclick="OnButtonClick();">
+		<input type="text" name="addtask" id="addtask">
+		<input type="button" value="追加" id="addbtn">
 	</form>
-	<script type="text/javascript">
-		let todo = [];
-		//追加ボタンを押したら新規タスクがToDoリストへ
-		function OnButtonClick() {
-			let addtask = document.new_task.addtask.value;
-			todo.push(addtask);
-			//ボタンクリックでHTMLのtfootの子ノードリセット
-			let tfoot = document.getElementById('task_list');
-			for (let x = tfoot.childNodes.length - 1; x >= 0; x--) {
-				tfoot.removeChild(tfoot.childNodes[x]);
-			}
-			//配列todoをfor文で表示
-			for (let i = 0; i < todo.length; i++) {
-				document.getElementById('task_list').innerHTML += '<tr id="task"><td>' + i + '</td>' + '<td>' + todo[i] + '</td>' + '<td><input id="state" type="button" style="margin:2px;" value="作業中"><input id="delete" type="button" style="margin:2px;" value="削除"></td></tr>';
-			}
-		}
-		//作業ボタンと完了ボタンを押したら切り替わる
-		//function OnStateClick() {}
-		//ラジオボタン========================================
-		//ラジオボタンの情報を取得する querySelector:指定されたセレクターまたはセレクターのグループに一致する、文書内の最初の Element を返します。ElementとはHTML や XML 文書における、要素（タグ）。
-		let radioElement = document.querySelector('#radio_button');
-		//ラジオボタンの変更開始
-		radioElement.addEventListener('change', radioButtonChange);
-
-		function radioButtonChange(event) {
-			//現在の選択状態を取得
-			let stateValue = radioElement.state_radio.value;
-			console.log(`選択されているラジオボタンは ${stateValue} です`);
-		}
-		//削除ボタンを押して消す
-		//let deleteElement = document.querySelector('#delete');
-		//ラジオボタンの変更開始
-		//deleteElement.addEventListener('click', deleteclickChange);
-
-		//function deleteclickChange() {
-		//HTMLを削除する
-		//document.getElementById("task").remove();
-		//}
-
-	</script>
 </body>
 
 </html>
