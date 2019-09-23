@@ -1,4 +1,4 @@
-const todo = [];
+const todos = [];
 let html = '';
 document.addEventListener("DOMContentLoaded", function () {
     //id=addbtnがクリックされたら
