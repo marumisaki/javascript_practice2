@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function () {
     document.getElementById("addbtn").addEventListener("click", function () {
         target = '';
         //配列にinputタグで入力された内容を変数addTaskに入れる
-        let task = document.new_task.addtask.value;
+        const task = document.new_task.addtask.value;
         //todo配列にaddTaskをプッシュ
         todo.push(task);
         console.log(task);
