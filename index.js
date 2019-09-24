@@ -5,12 +5,13 @@ document.addEventListener("DOMContentLoaded", function () {
     document.getElementById("addbtn").addEventListener("click", function () {
         target = '';
         //配列にinputタグで入力された内容を変数addTaskに入れる
-        const task = document.new_task.addtask.value;
+        let task = document.getElementById("addtask").value;
+        console.log(task);
         //todos配列にaddTaskをプッシュ
         todos.push(task);
         console.log(task);
         console.log(todos);
-        document.getElementById('addtask').value = '';
+        task = '';
         for (let i = 0; i < todos.length; i++) {
             html = '<td>' + i + '</td>' + '<td>' + todos[i] + '</td>' + '<td><input id="state" type="button" style="margin:2px;" value="完了"><input id="todo[del][i]" type="button" style="margin:2px;" value="削除"></td></tr>';
         }
