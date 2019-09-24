@@ -10,11 +10,11 @@
 <body>
     <h1>ToDoリスト</h1>
     <div class="list">
-        <form id="radio_button">
+        <div id="radio_button">
             <label><input type="radio" name="state_radio" value="すべて" checked />すべて</label>
             <label><input type="radio" name="state_radio" value="作業中" />作業中</label>
             <label><input type="radio" name="state_radio" value="完了" />完了</label>
-        </form>
+        </div>
         <table>
             <thead>
                 <tr>
@@ -28,11 +28,9 @@
             </tbody>
         </table>
     </div>
-    <form name="new_task">
-        <h2>新規タスクの追加</h2>
-        <input type="text" name="addtask" id="addtask">
-        <input type="button" value="追加" id="addbtn">
-    </form>
+    <h2>新規タスクの追加</h2>
+    <input type="text" name="addtask" id="addtask">
+    <input type="button" value="追加" id="addbtn">
 </body>
 
 </html>
