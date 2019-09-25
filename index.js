@@ -11,6 +11,11 @@ document.addEventListener("DOMContentLoaded", function () {
         console.log(task);
         console.log(todos);
         task = '';
+        //trタグ生成
+        let listBody = document.getElementById('list-body');
+        let trTag = document.createElement('tr');
+        listBody.appendChild(trTag);
+        trTag.setAttribute('id', 'list-tr');
         for (let i = 0; i < todos.length; i++) {
             html = '<td>' + i + '</td>' + '<td>' + todos[i] + '</td>' + '<td><input id="state" type="button" style="margin:2px;" value="完了"><input id="todo[del][i]" type="button" style="margin:2px;" value="削除"></td></tr>';
         }
