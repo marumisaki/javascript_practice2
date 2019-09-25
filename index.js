@@ -17,10 +17,11 @@ document.addEventListener("DOMContentLoaded", function () {
         listBody.appendChild(trTag);
         trTag.setAttribute('id', 'list-tr');
         for (let i = 0; i < todos.length; i++) {
-            html = '<td>' + i + '</td>' + '<td>' + todos[i] + '</td>' + '<td><input id="state" type="button" style="margin:2px;" value="完了"><input id="todo[del][i]" type="button" style="margin:2px;" value="削除"></td></tr>';
+            //tdタグ生成
+            let listTr = document.getElementById('list-tr');
+            let tdTag = document.createElement('td');
+            listTr.appendChild(tdTag);
+            tdTag.textContent = i;
         }
-        target = document.getElementById('task_list');
-        // ここでタスクを表示する
-        target.innerHTML += html;
     })
 })
