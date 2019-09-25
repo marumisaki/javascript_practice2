@@ -1,5 +1,4 @@
 const todos = [];
-let html = '';
 document.addEventListener("DOMContentLoaded", function () {
     //id=addbtnがクリックされたら
     document.getElementById("addbtn").addEventListener("click", function () {
