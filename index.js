@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function () {
             console.log(task);
             console.log(todos);
             task = '';
-            //trタグ生成
+            //tdタグ生成
             let td1 = document.createElement('td');
             td1.textContent = index;
 
@@ -26,6 +26,13 @@ document.addEventListener("DOMContentLoaded", function () {
             let deleteButton = document.createElement('button');
             deleteButton.textContent = '削除';
             td3.appendChild(deleteButton);
+
+            //trタグ生成
+            let tr = document.createElement('tr');
+            tr.appendChild(td1);
+            tr.appendChild(td2);
+            tr.appendChild(td3);
+            tr.appendChild(td4);
         }
     })
 })
