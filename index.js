@@ -1,26 +1,31 @@
 document.addEventListener("DOMContentLoaded", function () {
     //id=addbtnがクリックされたら
     document.getElementById("addbtn").addEventListener("click", function () {
-        const todos = [];
-        //配列にinputタグで入力された内容を変数addTaskに入れる
-        let task = document.getElementById("addtask").value;
-        console.log(task);
-        //todos配列にaddTaskをプッシュ
-        todos.push(task);
-        console.log(task);
-        console.log(todos);
-        task = '';
-        //trタグ生成
-        let listBody = document.getElementById('list-body');
-        let trTag = document.createElement('tr');
-        listBody.appendChild(trTag);
-        trTag.setAttribute('id', 'list-tr');
-        for (let i = 0; i < todos.length; i++) {
-            //tdタグ生成
-            let listTr = document.getElementById('list-tr');
-            let tdTag = document.createElement('td');
-            listTr.appendChild(tdTag);
-            tdTag.textContent = i;
+            const todos = [];
+            //配列にinputタグで入力された内容を変数addTaskに入れる
+            let task = document.getElementById("addtask").value;
+            console.log(task);
+            //todos配列にaddTaskをプッシュ
+            todos.push(task);
+            console.log(task);
+            console.log(todos);
+            task = '';
+            //trタグ生成
+            let td1 = document.createElement('td');
+            td1.textContent = index;
+
+            let td2 = document.createElement('td');
+            td2.textContent = todos;
+
+            let td3 = document.createElement('td');
+            let stateButton = document.createElement('button');
+            stateButton.textContent = '作業中';
+            td3.appendChild(stateButton);
+
+            let td4 = document.createElement('td');
+            let deleteButton = document.createElement('button');
+            deleteButton.textContent = '削除';
+            td3.appendChild(deleteButton);
         }
     })
 })
