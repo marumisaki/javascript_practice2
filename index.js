@@ -1,8 +1,7 @@
-const todos = [];
 document.addEventListener("DOMContentLoaded", function () {
     //id=addbtnがクリックされたら
     document.getElementById("addbtn").addEventListener("click", function () {
-        target = '';
+        const todos = [];
         //配列にinputタグで入力された内容を変数addTaskに入れる
         let task = document.getElementById("addtask").value;
         console.log(task);
