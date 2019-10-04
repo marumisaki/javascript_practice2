@@ -33,6 +33,11 @@ document.addEventListener("DOMContentLoaded", function () {
             tr.appendChild(td2);
             tr.appendChild(td3);
             tr.appendChild(td4);
+
+            let tbody = document.getElementById('list-body');
+            tbody.appendChild(tr);
+
+            index = index + 1;
         }
     })
 })
